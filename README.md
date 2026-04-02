@@ -2,30 +2,38 @@
 
 This repository accompanies our preprint:
 
-**Open-Set Supervised 3D Anomaly Detection: An Industrial Dataset and a Generalisable Framework for Unknown Defects** [[arXiv: 2604.01171]](https://arxiv.org/abs/2604.01171)
+**Open-Set Supervised 3D Anomaly Detection: An Industrial Dataset and a Generalisable Framework for Unknown Defects**  
+[arXiv: 2604.01171](https://arxiv.org/abs/2604.01171)
 
 ## Overview
 
 We study **open-set supervised 3D anomaly detection** in industrial scenarios, with a focus on detecting **unknown defects** that are not observed during training.
+
+To support research in this direction, we are open-sourcing the project in several stages.
+
+![OpenIndustry Overview](docs/dataset.png)
 
 ## Open-Source Roadmap
 
 Our release plan is divided into three steps:
 
 ### Step 1. OpenIndustry Dataset
+
 We first release the **OpenIndustry** dataset.
 
 At the current stage, we provide the dataset split for **self-supervised anomaly detection tasks**, making it convenient for use in conventional self-supervised settings.
 
-The dataset is available at:  
+**Dataset link:**  
 [https://huggingface.co/datasets/HanzheL/open-industry/upload/main](https://huggingface.co/datasets/HanzheL/open-industry/upload/main)
 
 In later releases, our official dataloader will automatically generate the splits for the **open-set setting** introduced in the paper.
 
 ### Step 2. Baseline Implementations
+
 We will then release the **baseline implementations** used in our paper for benchmarking and reproduction.
 
 ### Step 3. Open3D-AD
+
 Finally, we will release **Open3D-AD**, our generalisable framework for open-set supervised 3D anomaly detection.
 
 ## Status
