@@ -2,14 +2,11 @@
 
 This repository accompanies our preprint:
 
-**Open-Set Supervised 3D Anomaly Detection: An Industrial Dataset and a Generalisable Framework for Unknown Defects**  
-[arXiv: 2604.01171](https://arxiv.org/abs/2604.01171)
+**Open-Set Supervised 3D Anomaly Detection: An Industrial Dataset and a Generalisable Framework for Unknown Defects** [[arXiv: 2604.01171]](https://arxiv.org/abs/2604.01171)
 
 ## Overview
 
 We study **open-set supervised 3D anomaly detection** in industrial scenarios, with a focus on detecting **unknown defects** that are not observed during training.
-
-To support research in this direction, we are open-sourcing the project in several stages.
 
 ## Open-Source Roadmap
 
