@@ -24,7 +24,7 @@ We first release the **OpenIndustry** dataset.
 At the current stage, we provide the dataset split for **self-supervised anomaly detection tasks**, making it convenient for use in conventional self-supervised settings.
 
 **Dataset link:**  
-[https://huggingface.co/datasets/HanzheL/open-industry/upload/main](https://huggingface.co/datasets/HanzheL/open-industry/upload/main)
+[https://huggingface.co/datasets/HanzheL/open-industry/upload/main](https://huggingface.co/datasets/HanzheL/open-industry)
 
 In later releases, our official dataloader will automatically generate the splits for the **open-set setting** introduced in the paper.
 
