@@ -27,7 +27,7 @@ class PatchCore():
             return get_real_loader(split, class_name=class_name,known_defects = self.known_defects,pollution_per_defect=self.pollution_per_defect,seed =seed)
         if dataset_name == 'shapenet':
             return get_shapenet_loader(split, class_name=class_name,known_defects = self.known_defects,pollution_per_defect=self.pollution_per_defect,seed =seed)
-        if dataset_name == 'mc3dad':
+        if dataset_name == 'open-industry':
             return get_mbc3dad_loader(split, class_name=class_name,known_defects = self.known_defects,pollution_per_defect=self.pollution_per_defect,seed =seed)
     def fit(self, class_name,abnormal_ratio_threshold = 0.4,seed = 0):
         train_loader = self.get_dataloader(self.dataset_name,'train',class_name,level=self.level,seed=seed)

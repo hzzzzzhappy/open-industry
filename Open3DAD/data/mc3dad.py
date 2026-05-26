@@ -15,7 +15,7 @@ def stable_hash_int(s: str) -> int:
 
 def get_manifest_path(root: str, class_name: str, seed: int, k: int) -> str:
     # Change to relative project directory ./logs
-    meta_dir = os.path.join("logs", "mc3dad",str(seed))
+    meta_dir = os.path.join("logs", "open-industry",str(seed))
     os.makedirs(meta_dir, exist_ok=True)
     return os.path.join(meta_dir, f"pollution_seed{seed}_k{k}.json")
 

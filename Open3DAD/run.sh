@@ -11,11 +11,11 @@ LOG_DIR="logs"
 mkdir -p "${LOG_DIR}"
 
 # Datasets to run
-DATASETS=(real)  #open-industry real shapenet
+DATASETS=(open-industry)  # open-industry real shapenet
 
 # Dataset-specific known defects
 declare -A KNOWN_DEFECTS
-KNOWN_DEFECTS[mc3dad]="Bump Deformation"
+KNOWN_DEFECTS[open-industry]="Bump Deformation"
 KNOWN_DEFECTS[real]="bulge"
 KNOWN_DEFECTS[shapenet]="bulge"
 

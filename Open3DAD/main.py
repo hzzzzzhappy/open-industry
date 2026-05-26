@@ -23,7 +23,7 @@ def run_3d_ads(args):
         classes = real3d_classes()
     if args.dataset == 'shapenet':
         classes = shapenet3d_classes()
-    if args.dataset == 'mc3dad':
+    if args.dataset == 'open-industry':
         classes = mbc3dad_classes()
     METHOD_NAMES = [
         "Simple3D",

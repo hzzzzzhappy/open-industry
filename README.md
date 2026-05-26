@@ -319,6 +319,80 @@ Cache locations:
 
 ---
 
+## Open3DAD Implementation
+
+This repository also includes the Open3DAD implementation under `Open3DAD/`.
+For this implementation, the OpenIndustry dataset is exposed as `open-industry`
+through the `--dataset` argument. Some internal file and function names still
+use historical names such as `mc3dad.py` and `mbc3dad_classes()` for
+compatibility, but the external running interface uses `open-industry`.
+
+### Environment
+
+Create and activate the conda environment:
+
+```bash
+cd Open3DAD
+conda env create -f environment.yml
+conda activate open-industry
+```
+
+### Run With Script
+
+The default script runs Open3DAD on OpenIndustry:
+
+```bash
+cd Open3DAD
+bash run.sh
+```
+
+Before running, the main settings in `run.sh` are:
+
+```bash
+DATASETS=(open-industry)
+KNOWN_DEFECTS[open-industry]="Bump Deformation"
+CUDA_ID=0
+thr=0
+lam=0.1
+```
+
+`pollution_per_defect` controls how many anomalous samples are used for each
+known defect type during open-set supervised training.
+
+### Run A Single Experiment
+
+You can also run one experiment directly:
+
+```bash
+python main.py \
+  --dataset open-industry \
+  --num_group 4096 \
+  --group_size 128 \
+  --max_nn 40 \
+  --use_LFSA True \
+  --use_MSND True \
+  --expname open-industry_thr0_lam0.1_seed1 \
+  --known_defects Bump Deformation \
+  --pollution_per_defect 5 \
+  --abnormal_ratio_threshold 0 \
+  --lam 0.1 \
+  --seed 1
+```
+
+Key arguments:
+
+- `--dataset`: dataset name. Use `open-industry` for OpenIndustry.
+- `--known_defects`: anomaly types treated as known during training.
+- `--pollution_per_defect`: number of anomalous samples per known defect.
+- `--abnormal_ratio_threshold`: abnormal ratio threshold.
+- `--lam`: weighting coefficient used by the method.
+- `--use_LFSA` and `--use_MSND`: enable the corresponding Open3DAD modules.
+
+Logs are written under `Open3DAD/logs/`, with separate subdirectories for
+different random seeds.
+
+---
+
 ## Citation
 
 If you find this repository useful, please cite:

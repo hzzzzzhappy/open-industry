@@ -1,4 +1,4 @@
-name: AD1
+name: open-industry
 channels:
   - defaults
 dependencies:
@@ -152,4 +152,3 @@ dependencies:
       - werkzeug==3.1.5
       - widgetsnbextension==4.0.15
       - zipp==3.23.0
-prefix: /opt/conda/envs/AD1

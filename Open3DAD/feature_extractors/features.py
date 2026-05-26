@@ -318,7 +318,7 @@ class Features(torch.nn.Module):
         if self.args.dataset == 'mulsen' or self.args.dataset == 'minishift' or self.args.dataset == 'quan':
             tmp_s,_ = torch.topk(s_map, 80)
             s = torch.mean(tmp_s)     
-        # if self.args.dataset == 'mc3dad':
+        # if self.args.dataset == 'open-industry':
         #     tmp_s,_ = torch.topk(s_map, 80)
         #     s = torch.mean(tmp_s)
 
